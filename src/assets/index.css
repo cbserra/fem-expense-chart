@@ -1,57 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    html,
-    body {
-        @apply m-0 p-0 w-full h-full bg-cream text-base;
-    }
+  html,
+  body {
+    @apply m-0 flex h-full w-full flex-col items-center justify-center bg-cream p-0 text-base;
+  }
 
-    * {
-        @apply box-border;
-    }
+  * {
+    @apply box-border;
+  }
 
-    header {
-        @apply flex bg-soft-red
-    }
+  header {
+    @apply flex w-full justify-between rounded-[10px] bg-soft-red pt-8 pr-10 pb-9 pl-8 text-white;
+    @apply md:pt-10 md:pr-10 md:pb-10 md:pl-12;
+  }
 
-    main {
-        @apply bg-white  rounded-2xl w-full py-10 px-8 flex flex-col items-center justify-center gap-y-10;
-    }
+  main {
+    @apply flex  w-full flex-col items-center justify-center gap-y-10 rounded-2xl bg-white py-10 px-8;
+    @apply md:pt-14 md:pr-16 md:pb-16 md:pl-16;
+  }
 
-    
+  hr {
+    @apply h-1 w-full rounded-sm bg-cream;
+  }
 }
 
 @layer components {
-    #root {
-        @apply flex flex-col items-center justify-center px-[1.6rem] w-full h-full gap-7;
-    }
+  #root {
+    @apply flex h-full w-full min-w-[325px] max-w-[540px] flex-col items-center justify-center gap-7 px-[1.6rem];
+    @apply md:gap-10;
+  }
 
-    .chart {
-        @apply flex h-96 w-full items-center justify-center;
-    }
+  .heading {
+    @apply flex flex-col items-start justify-center;
+  }
 
-    .chart--day-container {
-        @apply flex flex-col w-[14%] h-full justify-end gap-y-5;
-    }
+  .balance-label {
+    @apply text-md font-normal;
+    @apply md:text-lg;
+  }
 
-    .chart--day-bar-container {
-        @apply flex flex-col items-center justify-between gap-y-3;
-    }
+  .balance-value {
+    @apply text-lg font-bold;
+    @apply md:text-xl;
+  }
 
-    .chart--day-amount-hover {
-        @apply hidden bg-black text-white rounded-md w-full p-2 font-bold text-center text-sm;
-    }
+  .spending-heading {
+    @apply w-full text-left text-xl font-bold text-dark-brown;
+    @apply md:text-2xl;
+  }
 
-    .chart--day-bar {
-        @apply  flex flex-col rounded-md w-3/4;
-    }
+  .chart {
+    @apply flex h-96 w-full items-center justify-center;
+  }
 
-    .chart--day-label {
-        @apply text-center text-sm text-medium-brown;
-    }
-    
+  .chart--day-container {
+    @apply flex h-full w-[15%] flex-col justify-end gap-y-5;
+    @apply md:gap-y-3;
+  }
+
+  .chart--day-bar-container {
+    @apply flex flex-col items-center justify-between gap-y-3;
+  }
+
+  .chart--day-amount-hover {
+    @apply hidden rounded-md bg-black p-2 text-center text-sm font-bold text-white;
+    @apply md:text-md;
+  }
+
+  .chart--day-bar {
+    @apply flex w-3/4 flex-col rounded-md;
+  }
+
+  .chart--day-label {
+    @apply text-center text-sm text-medium-brown;
+    @apply md:text-md;
+  }
+
+  .stats-container {
+    @apply flex w-full flex-col;
+  }
+
+  .total-heading {
+    @apply text-md text-medium-brown;
+  }
+
+  .amount-container {
+    @apply flex items-center justify-between;
+  }
+
+  .spending-value {
+    @apply text-2xl font-bold text-dark-brown;
+    @apply md:text-3xl;
+  }
+
+  .prev-month-container {
+    @apply flex flex-col;
+  }
+
+  .prev-month-label,
+  .prev-month-value {
+    @apply text-right;
+  }
+
+  .prev-month-value {
+    @apply text-md font-bold text-dark-brown;
+    @apply md:text-lg;
+  }
+
+  .prev-month-label {
+    @apply text-md text-medium-brown;
+    @apply md:text-lg;
+  }
+
+  .attribution {
+    @apply flex items-center justify-center text-sm text-dark-brown;
+  }
+  .attribution a {
+    @apply text-soft-red hover:text-pale-soft-red;
+  }
 }

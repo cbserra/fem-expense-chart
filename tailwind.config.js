@@ -30,7 +30,10 @@ module.exports = {
         lineHeight: '3.1rem',
       }],
       '2xl': ['3.2rem', {
-        lineHeight: '4.2rem',
+        lineHeight: '4.0rem',
+      }],
+      '3xl': ['4.8rem', {
+        lineHeight: '6.2rem',
       }],
 
     },
