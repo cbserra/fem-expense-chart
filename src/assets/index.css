@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply m-0 p-0 w-full h-full bg-cream text-base;
+    }
+
+    * {
+        @apply box-border;
+    }
+
+    header {
+        @apply flex bg-soft-red
+    }
+
+    main {
+        @apply bg-white  rounded-2xl w-full py-10 px-8 flex flex-col items-center justify-center gap-y-10;
+    }
+
+    
+}
+
+@layer components {
+    #root {
+        @apply flex flex-col items-center justify-center px-[1.6rem] w-full h-full gap-7;
+    }
+
+    .chart {
+        @apply flex h-96 w-full items-center justify-center;
+    }
+
+    .chart--day-container {
+        @apply flex flex-col w-[14%] h-full justify-end gap-y-5;
+    }
+
+    .chart--day-bar-container {
+        @apply flex flex-col items-center justify-between gap-y-3;
+    }
+
+    .chart--day-amount-hover {
+        @apply hidden bg-black text-white rounded-md w-full p-2 font-bold text-center text-sm;
+    }
+
+    .chart--day-bar {
+        @apply  flex flex-col rounded-md w-3/4;
+    }
+
+    .chart--day-label {
+        @apply text-center text-sm text-medium-brown;
+    }
+    
+}
