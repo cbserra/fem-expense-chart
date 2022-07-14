@@ -7,7 +7,7 @@ const Stats = () => {
     <div className="stats-container">
       <h2 className="total-heading">Total this month</h2>
       <div className="amount-container">
-        <div className="spending-value">{spendingForMonth}</div>
+        <div className="spending-value">${spendingForMonth}</div>
         <div className="prev-month-container">
           <span className="prev-month-value">
             {previousMonthDifference > 0 ? "+" : "-"}
