@@ -26,7 +26,13 @@ const Chart = () => {
         // const dayContainerName = `${day.day}-container`
         // const height = `${day.amount / weeklyTotal * 100}%`
         return (
-          <div key={index} className={`${day.day} chart--day-container`}>
+          <div
+            key={index}
+            className={`${day.day} chart--day-container`}
+            style={{
+              animationDelay: `${index * 0.1}s`,
+            }}
+          >
             <div className="chart--day-bar-container group">
               <div className="chart--day-amount-hover group-hover:flex">
                 ${day.amount}
@@ -39,6 +45,9 @@ const Chart = () => {
                 }`}
                 style={{
                   height: `${(day.amount / maxDayAmount) * maxBarSize}rem`,
+                  // transition: "height 0.2s ease-in-out",
+                  // transitionDelay: `${index * 0.1}s`,
+                  animationDelay: `${1 + index * 0.1}s`,
                 }}
               >
                 &nbsp;

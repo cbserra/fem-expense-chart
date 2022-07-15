@@ -74,8 +74,9 @@
   }
 
   .chart--day-bar {
-    @apply flex w-3/4 flex-col rounded-md;
+    @apply invisible flex h-1 w-3/4 flex-col rounded-md;
     @apply md:rounded-lg;
+    animation: bar-height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
   .chart--day-label {
@@ -125,5 +126,16 @@
   }
   .attribution a {
     @apply text-soft-red hover:text-pale-soft-red;
+  }
+}
+
+@layer utilities {
+  @keyframes bar-height {
+    from {
+      height: 0;
+    }
+    to {
+      visibility: visible;
+    }
   }
 }
