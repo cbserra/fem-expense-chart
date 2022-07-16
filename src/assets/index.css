@@ -38,8 +38,8 @@
 
 @layer components {
   .root-container {
-    @apply flex  min-w-[32.5rem] max-w-[54rem] flex-col items-center justify-center gap-7 px-[1.6rem];
-    @apply md:gap-10;
+    @apply flex  min-w-[36rem] max-w-[55rem] flex-col items-center justify-center gap-7 px-[.8rem];
+    @apply md:min-w-[55rem] md:max-w-[55rem] md:gap-10 md:px-[1.6rem];
   }
 
   .heading {
@@ -63,11 +63,11 @@
   }
 
   .chart {
-    @apply flex min-h-[20rem] w-full items-end;
+    @apply flex min-h-[25rem] w-full items-end;
   }
 
   .chart--day-container {
-    @apply flex h-full w-[15%] flex-col justify-end gap-y-5;
+    @apply flex h-full w-full flex-col justify-end gap-y-5;
     @apply md:gap-y-3;
   }
 
@@ -76,13 +76,13 @@
   }
 
   .chart--day-amount-hover {
-    @apply hidden rounded-md bg-black p-2 text-center text-sm font-bold text-white;
-    @apply md:text-md;
+    @apply hidden rounded-md bg-black p-[0.15rem] text-center text-sm font-bold text-white;
+    @apply md:p-2 md:text-md;
   }
 
   .chart--day-bar {
-    @apply invisible flex h-1 w-3/4 flex-col rounded-md;
-    @apply md:rounded-lg;
+    @apply invisible flex h-1 w-[33px] flex-col rounded-md;
+    @apply md:w-[50px] md:rounded-lg;
     animation: bar-height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
